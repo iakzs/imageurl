@@ -1,50 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Image Upload</title>
+  <meta http-equiv="refresh" content="0; URL='http://iakzsimgss.duckdns.org:3000'" />
 </head>
 <body>
-  <h1>Image Upload</h1>
-
-  <form id="uploadForm" enctype="multipart/form-data">
-    <input type="file" name="image" id="imageInput">
-    <button type="submit">Upload</button>
-  </form>
-
-  <div id="linkContainer">
-    <h2>Generated Link:</h2>
-    <p id="link"></p>
-  </div>
-
-  <script>
-    const uploadForm = document.getElementById('uploadForm');
-    const imageInput = document.getElementById('imageInput');
-    const linkContainer = document.getElementById('linkContainer');
-    const linkElement = document.getElementById('link');
-
-    uploadForm.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const formData = new FormData();
-      formData.append('image', imageInput.files[0]);
-
-      try {
-        const response = await fetch('iakzsimgss.duckdns.org:3000/upload', {
-          method: 'POST',
-          body: formData,
-        });
-
-        if (response.ok) {
-          const data = await response.json();
-          const link = data.link;
-          linkElement.textContent = link;
-          linkContainer.style.display = 'block';
-        } else {
-          throw new Error('File upload failed.');
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    });
-  </script>
+  <p>This page is redirecting you...</p>
 </body>
 </html>
