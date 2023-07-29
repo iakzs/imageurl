@@ -28,7 +28,7 @@
       formData.append('image', imageInput.files[0]);
 
       try {
-        const response = await fetch('iakzsimgss.duckdns.org:3000/uploads', {
+        const response = await fetch('?:3000/uploads', {
           method: 'POST',
           body: formData,
         });
